@@ -1,0 +1,275 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+div{
+    overflow: auto;
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    font-size: 1rem;
+}
+
+.form-control {
+    width: 300px;
+}
+
+/* Main Container */
+.root {
+    padding: 20px;
+}
+
+.maincontainer {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h3, h4 {
+    margin-bottom: 15px;
+}
+
+/* Basic Information Section */
+.Basicinfo {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Basicinfo h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.Basicinfo .available_number div {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Live Status Section */
+.AdditionalInfo {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.status div {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.AdditionalInfo h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #2f4f4f;
+}
+
+/* Performance Metrics Section */
+.performanceStats {
+    background-color: #e6f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.performanceStats h4 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #2f4f4f;
+}
+
+.metrics {
+    margin-bottom: 20px;
+}
+
+.metrics div {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.canvas_div {
+    text-align: center;
+}
+
+/* Crew Details Section */
+.crewDetails {
+    background-color: #ffebf0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.crewInfo {
+    margin-bottom: 20px;
+}
+
+.crewInfo h4 {
+    font-size: 1.4rem;
+    color: #8b0000;
+    margin-bottom: 15px;
+}
+
+.crewInfo div {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Charts */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+.bus_actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action_button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.action_button:hover {
+    background-color: #0056b3;
+}
+
+.view_map {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.view_map:hover {
+    color: #0056b3;
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.scheduled_div {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scheduled_div:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.businfo_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.businfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.bus_number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bus_details {
+    margin-top: 10px;
+}
+
+.detail_item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 5px 0;
+}
+
+.detail_label {
+    font-weight: bold;
+    color: #555;
+}
+
+.detail_value {
+    color: #666;
+}
+
+.driver_info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.driver_image {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.driver_image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.driver_details {
+    font-size: 14px;
+    color: #444;
+}
+
+.drivername {
+    font-weight: bold;
+}
+
+.driverage {
+    font-style: italic;
+    color: #888;
+}
+

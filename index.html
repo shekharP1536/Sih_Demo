@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule with Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/0d194b00b9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="uppersection">
+
+            <div class="bus-info">
+                <h2 class="label">Bus Number: <span>120B</span></h2>
+            </div>
+            <div class="clock">
+                <h2>
+                    <span class="clockTime label" id="currentTime"></span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="driver-info">
+            <h3>Driver Details:</h3>
+            <div class="driver-info-div">
+                <div>
+                    <span class="label">Driver Name: </span><span id="DriverName">John Doe</span>
+                </div>
+                <div>
+                    <span class="label">Age: </span><span id="DriverAge">45</span>
+                </div>
+                <div>
+                    <span class="label">Experience: </span>
+                    <span id="DriverExp">7 years</span>
+                </div>
+                <div>
+                    <span class="label">Break Time: </span>
+                    <span id="BreakTime">16:00 - 16:30</span>
+                </div>
+            </div>
+        </div>
+        <div class="schedule_container">
+            <h3 class="label">Bus Schedule :</h3>
+            <div class="schedule_timetable">
+                <div class="start_point_container">
+                    <div class="start_point">India Gate</div>
+                    <div class="start_point_time">15:30</div>
+                </div>
+                <div class="end_point_container">
+                    <div class="end_point">Raj Bhavan</div>
+                    <div class="end_point_time">18:00</div>
+                </div>
+            </div>
+        </div>
+        <div class="timeline">
+            <h3>Bus Route Timeline</h3>
+            <div class="timeline-container">
+                <div class="station" id="A">A</div>
+                <div class="connection_line"></div>
+                <div class="connection_line"></div>
+                <div class="connection_line_direction"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="station" id="B">B</div>
+                <div class="connection_line"></div>
+                <div class="connection_line"></div>
+                <div class="connection_line_direction"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="station current" id="C">C</div>
+                <div class="connection_line currentWay"></div>
+                <div class="connection_line currentWay"></div>
+                <div class="connection_line_direction"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="station" id="D">D</div>
+                <div class="connection_line"></div>
+                <div class="connection_line"></div>
+                <div class="connection_line_direction"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="station" id="T">T</div>
+                <div class="connection_line"></div>
+                <div class="connection_line"></div>
+                <div class="connection_line_direction"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="station" id="R">R</div>
+                <div class="connection_line"></div>
+                <div class="connection_line"></div>
+                <div class="connection_line_direction"><i class="fa-solid fa-angle-right"></i></div>
+                <div class="station" id="Y">Y</div>
+            </div>
+        </div>
+        <div class="StatusDisplay_container">
+            <div class="previous_station_info_container">
+                <div class="previous_station">Delhi Gate</div>
+                <div class="previous_station_estTime">5 min ago</div>
+            </div>
+            <div class="current_status">
+                <span class="label">Status :</span>
+                <div class="status">OnTime</div>
+            </div>
+            <div class="next_station_info_contianer">
+                <div class="next_station">Supreme Court</div>
+                <div class="next_station_estTime">10 min Etd.</div>
+            </div>
+        </div>
+        <div class="map">
+            <h3>Route on Map</h3>
+            
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83967769223!2d77.0688993!3d28.5275829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03c01089d94f%3A0x4dfef4796e4e9c50!2sDelhi%2C%20India!5e0!3m2!1sen!2sus!4v1601205879468!5m2!1sen!2sus"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    <div class="notification_container">
+            <div class="notification_pannel">
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Important Notice!</strong> Some bus routes may experience delays due to traffic. Please monitor the schedule for updated timings.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">All Clear!</h4>
+                <p>The current bus schedule is running smoothly without any delays. All drivers are on their scheduled break times, and the system is operating efficiently.</p>
+                <hr>
+                <p class="mb-0">You can check the next scheduled break times and route updates through the scheduling system.</p>
+            </div>
+        
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <div>
+                    Bus #45 is nearing the end of its scheduled loop. A driver break will be required soon.
+                </div>
+            </div>
+        
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </symbol>
+                <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                </symbol>
+                <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </symbol>
+            </svg>
+        
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                <div>
+                    Route 12 is currently experiencing a slight delay due to traffic. Next bus arrival in 10 minutes.
+                </div>
+            </div>
+        
+            <div class="alert alert-success d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                <div>
+                    Bus #21 has completed its loop and the driver has resumed after the break.
+                </div>
+            </div>
+        
+            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                <div>
+                    Traffic alert on Route 5. Expect delays. Next scheduled break in 15 minutes.
+                </div>
+            </div>
+        
+            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                <div>
+                    Critical issue on Route 8. Bus service suspended temporarily due to roadblock. Driver needs immediate rerouting.
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+
+</html>
