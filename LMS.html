@@ -11,57 +11,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="resizejs/resize.js"></script>
-    <link rel="stylesheet" href="resizejs/resize.css">
 </head>
 
 
 <body>
     <!-- Navigation Bar -->
-
-    <div id="main">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">LMS - 204</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Buses</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">Actions</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Crews</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#" tabindex="-1">Other</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LMS Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/LMS.html">LMS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Crew Management
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Crew Detail</a></li>
+                            <li><a class="dropdown-item" href="#">Crew schedule</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <div class="main_container container-fluid resizable-left" id="win1">
-
-
+        </div>
+    </nav>
+    <div id="maincontainer">
+        <div class="main_container container-fluid" id="win1">
             <!-- Main Container -->
             <div class="container-fluid mt-4 col-md-8 resizable-top" id="win3">
                 <!-- Overview Section -->
@@ -151,7 +141,7 @@
             </div>
             <!-- Bus info Contianer -->
             <div class="livemap_interaction resizable-bottom" id="win4">
-                <h3 style="position: absolute">Live map of LMS</h3>
+                <!-- <h3 style="position: absolute">Live map of LMS</h3> -->
 
 
                 <iframe id="mapsrc"
@@ -161,7 +151,7 @@
 
             </div>
         </div>
-        <div class="container-fluid resizable-right" wid="win2">
+        <div class="bus-schedule-section container-fluid" wid="win2">
             <h3>Bus Scheduled</h3>
             <div class="bus_scheduled_contianer">
                 <div class="sidebar container-fluid">
@@ -264,6 +254,105 @@
                             <button class="action_button view_map" onclick="updateMap(this)">View Map</button>
                         </div>
                     </div>
+                    <div class="scheduled_div container-fluid" data-origin="Connaught Place"
+                    data-destination="Rajouri Garden">
+                    <div class="businfo_div">
+                        <div class="businfo">
+                            <span class="bus_number">101</span>
+                            <div class="bus_details">
+                                <div class="detail_item">
+                                    <span class="detail_label">Origin:</span>
+                                    <span class="detail_value">Connaught Place</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Destination:</span>
+                                    <span class="detail_value">Rajouri Garden</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Nearest Station:</span>
+                                    <span class="detail_value">Central Secretariat</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Next Station:</span>
+                                    <span class="detail_value">Kalkaji Mandir</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Estimated Time:</span>
+                                    <span class="detail_value">25 mins</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Average Speed:</span>
+                                    <span class="detail_value">30 km/h</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="driver_info">
+                        <div class="driver_image">
+                            <img src="avatar.jpg" alt="Driver" />
+                        </div>
+                        <div class="driver_details">
+                            <span class="drivername">John Doe</span>
+                            <span class="driverage">45 years</span>
+                        </div>
+                    </div>
+                    <div class="bus_actions">
+                        <button class="action_button">Track Bus</button>
+                        <button class="action_button">Contact Driver</button>
+                        <button class="action_button view_map" onclick="updateMap(this)">View Map</button>
+                    </div>
+                </div>
+
+                <!-- Additional bus entries here (same structure) -->
+                <!-- Example entry -->
+                <div class="scheduled_div container-fluid" data-origin="Karol Bagh"
+                    data-destination="Dwarka Sector 21">
+                    <div class="businfo_div">
+                        <div class="businfo">
+                            <span class="bus_number">102</span>
+                            <div class="bus_details">
+                                <div class="detail_item">
+                                    <span class="detail_label">Origin:</span>
+                                    <span class="detail_value">Karol Bagh</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Destination:</span>
+                                    <span class="detail_value">Dwarka Sector 21</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Nearest Station:</span>
+                                    <span class="detail_value">Rajiv Chowk</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Next Station:</span>
+                                    <span class="detail_value">Dwarka Sector 12</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Estimated Time:</span>
+                                    <span class="detail_value">35 mins</span>
+                                </div>
+                                <div class="detail_item">
+                                    <span class="detail_label">Average Speed:</span>
+                                    <span class="detail_value">28 km/h</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="driver_info">
+                        <div class="driver_image">
+                            <img src="avatar.jpg" alt="Driver" />
+                        </div>
+                        <div class="driver_details">
+                            <span class="drivername">Jane Smith</span>
+                            <span class="driverage">38 years</span>
+                        </div>
+                    </div>
+                    <div class="bus_actions">
+                        <button class="action_button">Track Bus</button>
+                        <button class="action_button">Contact Driver</button>
+                        <button class="action_button view_map" onclick="updateMap(this)">View Map</button>
+                    </div>
+                </div>
                 </div>
 
             </div>
@@ -291,15 +380,14 @@
     <script>
         document.addEventListener(
             "DOMContentLoaded", () => {
-                document.getElementById("main").style.width = window.innerWidth + "px";
-                document.getElementById("main").style.height = window.innerHeight + "px";
+                // document.getElementById("main").style.width = window.innerWidth + "px";
+                // document.getElementById("main").style.height = window.innerHeight + "px";
 
                 var sizes = {
-                    "win1": 0.80,
-                    "win3": 0.70
+                    "win1": 0.80
 
                 }
-                Resizable.initialise("main", sizes, 8);
+                Resizable.initialise("maoncontainer", sizes, 8);
             }
 
         );

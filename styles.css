@@ -7,12 +7,19 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
+#maincontainer{
+  display: flex;
+}
+.notification_container{
+  flex: 30%;
+}
+nav{
+  z-index:1
+}
 .container {
   background-color: white;
   border-radius: 12px;
@@ -21,9 +28,7 @@ body {
   max-width: 1000px;
   width: 100%;
 }
-.notification_container{
-  width: 50%;
-}
+
 
 .timeline {
   margin: 20px 0;

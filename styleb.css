@@ -1,24 +1,9 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+iframe{
+    overflow: hidden;
 }
-div{
-    overflow: auto;
+.livemap_interaction{
+    height: 50%;
 }
-
-/* Navbar */
-.navbar {
-    margin-bottom: 20px;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 .navbar .nav-link {
     font-size: 1rem;
 }
@@ -31,8 +16,13 @@ div{
 .root {
     padding: 20px;
 }
-
-.maincontainer {
+#maincontainer{
+    display: flex;
+}
+.bus-schedule-section{
+    flex: 30%;
+}
+.main_container {
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -167,14 +157,14 @@ canvas {
 
 .view_map {
     text-decoration: none;
-    color: #007bff;
+    /* color: #007bff; */
     font-size: 14px;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .view_map:hover {
-    color: #0056b3;
+    color: #ffffff;
 }
 
 .sidebar {
