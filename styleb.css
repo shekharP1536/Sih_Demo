@@ -1,3 +1,9 @@
+@media screen and (max-width: 1300px) {
+    #maincontainer{
+      display: flex;
+      flex-direction: column;
+    }
+  }
 iframe{
     overflow: hidden;
 }
