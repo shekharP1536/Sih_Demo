@@ -1,0 +1,89 @@
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.top-row, .middle-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.top-left, .middle-left, .bottom-left {
+    font-weight: bold;
+    color: #333;
+}
+
+.top-right, .middle-right, .bottom-right {
+    font-weight: 500;
+    color: #555;
+}
+
+.route-info h4 {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.divider {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 10px 0;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.status.on-time {
+    background-color: #28a745;
+    color: white;
+}
+
+.status.delayed {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status.early {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.bottom-centre {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .top-row, .middle-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bottom-left, .bottom-right, .bottom-centre {
+        margin-top: 5px;
+    }
+}
